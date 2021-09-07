@@ -8,18 +8,28 @@ function ProductThumbnail({ product, onEditProduct, onDeleteProduct, onSaveProdu
 
   const baseCssClasses = 'product-thumbnail container'
   const conditionalCssClasses =
-    (isFadingOut ? 'fade-out ' : 'fade-in ') +
+    (isFadingOut ? ' fade-out' : ' fade-in') +
     (product.id === selectedProductId ? baseCssClasses + ' mark' : baseCssClasses)
+
+
+  const fadeOut = (cb) => {
+    setIsFadingOut(true);
+    cb()
+  }
+  const handleRemoveItem = () => {
+    onDeleteProduct(product.id)
+    setIsFadingOut(false)
+  }
+
 
   const removeProduct = (evt) => {
 
     evt.stopPropagation()
-    setIsFadingOut(true)
     setTimeout(() => {
       onDeleteProduct(product.id)
-      setIsFadingOut(false)
+      setIsFadingOut(true)
     }
-      , 1500)
+      , 4000)
   }
 
   return (
@@ -33,6 +43,10 @@ function ProductThumbnail({ product, onEditProduct, onDeleteProduct, onSaveProdu
           <p className="product-description">{product.description}</p>
         </div>
       </div>
+      {/* <button className="btn btn-delete" onClick={(evt) => {
+        evt.stopPropagation();
+        fadeOut(setTimeout(() => handleRemoveItem(), 300))
+      }}>Delete</button> */}
       <button className="btn btn-delete" onClick={(evt) => removeProduct(evt)}>Delete</button>
     </div>)
 }

@@ -3,7 +3,10 @@
   border: 2px solid #000;
   flex: 1;
   position: relative;
-  transition: all linear 3s;
+
+  //ANIMATION
+  -webkit-animation: fadein 0.3s linear forwards;
+  animation: fadein 0.3s linear forwards;
 
   .input-container {
     display: flex;
