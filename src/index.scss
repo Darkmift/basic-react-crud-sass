@@ -1,0 +1,23 @@
+// SETUP
+@import './sassStyles/variables';
+// @import 'typography';
+
+// BASICS
+@import './sassStyles/base';
+@import './sassStyles/flex';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  @extend .main-border;
+  padding: $mainPad;
+  box-shadow: 3px 3px 0px 0px #000000;
+  line-height: 1;
+  &:active {
+    box-shadow: none;
+  }
+}
