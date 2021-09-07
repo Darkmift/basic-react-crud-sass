@@ -15,11 +15,11 @@ function ProductThumbnail({ product, onEditProduct, onDeleteProduct, onSaveProdu
 
     evt.stopPropagation()
     setIsFadingOut(true)
+
     setTimeout(() => {
       onDeleteProduct(product.id)
       setIsFadingOut(false)
-    }
-      , 1500)
+    }, 300)
   }
 
   return (

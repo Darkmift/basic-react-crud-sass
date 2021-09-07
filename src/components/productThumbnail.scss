@@ -5,11 +5,11 @@
   text-transform: capitalize;
   margin: 0 20px 10px 0;
   justify-content: space-between;
-  -webkit-transition: display 1s ease-in-out;
-  -moz-transition: display 1s ease-in-out;
-  -ms-transition: display 1s ease-in-out;
-  -o-transition: display 1s ease-in-out;
-  transition: display 1s ease-in-out;
+  -webkit-transition: display 0.3s ease-in-out;
+  -moz-transition: display 0.3s ease-in-out;
+  -ms-transition: display 0.3s ease-in-out;
+  -o-transition: display 0.3s ease-in-out;
+  transition: display 0.3s ease-in-out;
 
   &.mark {
     background-color: rgb(123, 148, 194);
@@ -19,12 +19,12 @@
   -webkit-animation: fadein 0.3s linear forwards;
   animation: fadein 0.3s linear forwards;
 
-  .fade-in {
+  &.fade-in {
     -webkit-animation: fadein 0.3s linear forwards;
     animation: fadein 0.3s linear forwards;
   }
 
-  .fade-out {
+  &.fade-out {
     -webkit-animation: fadeout 0.3s linear forwards;
     animation: fadeout 0.3s linear forwards;
   }
