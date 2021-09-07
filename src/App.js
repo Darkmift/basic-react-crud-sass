@@ -25,7 +25,7 @@ function App() {
   }
 
   const saveProduct = (product) => {
-    saveItem(product, setProducts, setSelectedProduct, products)
+    saveItem({product,products, setProducts, setSelectedProduct})
   }
 
   const removeProduct = (productId) => {

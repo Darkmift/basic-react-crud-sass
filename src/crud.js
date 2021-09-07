@@ -1,5 +1,6 @@
-const saveItem = (product, products, setProducts,
-  setSelectedProduct) => {
+const saveItem = ({ product, products, setProducts,
+  setSelectedProduct }) => {
+  console.log("🚀 ~ file: crud.js ~ line 3 ~ products", products)
 
   if (!product) {
     setSelectedProduct(null)
@@ -12,7 +13,7 @@ const saveItem = (product, products, setProducts,
   } else {
     var uniqid = Date.now();
     product.id = uniqid;
-    products.push(product);
+    products.unshift(product);
   }
   setProducts([...products])
   setSelectedProduct(null)
