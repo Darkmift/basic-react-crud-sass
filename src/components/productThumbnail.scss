@@ -1,0 +1,31 @@
+.product-thumbnail {
+  border: 1px solid rgb(61, 60, 60);
+  padding: 5px;
+  display: flex;
+  text-transform: capitalize;
+  margin: 0 20px 10px 0;
+  justify-content: space-between;
+  transition: all linear 3s;
+
+  .mark {
+    background-color: rgb(123, 148, 194);
+  }
+
+  .img-content-wrapper {
+    display: flex;
+    img {
+      margin-right: 15px;
+      flex: 1;
+    }
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      flex: 4;
+    }
+  }
+
+  .btn-delete {
+    align-self: flex-end;
+    background-color: orange;
+  }
+}
